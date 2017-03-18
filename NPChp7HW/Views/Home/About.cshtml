@@ -1,7 +1,15 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Javascipt XSS Demo for Chapter 7";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
-
-<p>Use this area to provide additional information.</p>
+<h2>@ViewBag.Title</h2>
+<p>Input some javascript below. This page will demonstrate the difference between a properly filtered JavaScript attack and an improperly filtered one.</p>
+@using (Html.BeginForm())
+{   <div class="form-group">
+    @Html.Label("input-js", "Text Input")<br>
+    @Html.TextArea("input-js")
+    </div>
+    <div class="form-group">
+        <input type="submit" />
+    </div>
+    
+}
