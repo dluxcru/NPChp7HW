@@ -5,9 +5,9 @@
 <h3>@ViewBag.Message</h3>
 
 <h1>Unfiltered Input</h1>
-<p>@ViewBag.Unfiltered</p>
+<p>@Html.Raw(ViewBag.XSS)</p>
 <h1>Filtered Input</h1>
-<p>@Html.Encode(ViewBag.Filtered)</p>
+<p>@ViewBag.XSS</p>
 <!--
 <address>
     One Microsoft Way<br />
